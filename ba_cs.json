@@ -1,0 +1,132 @@
+{
+	"required_classes": [
+		{
+			"label": "COMP 150",
+			"title": "Programming I",
+			"hours": 3
+		},
+		{
+			"label": "COMP 151",
+			"title": "Programming II",
+			"hours": 3
+		},
+		{
+			"label": "COMP 170",
+			"title": "Software Development",
+			"hours": 5
+		},
+		{
+			"label": "COMP 245",
+			"title": "Data Structures",
+			"hours": 3
+		},
+		{
+			"label": "COMP 250",
+			"title": "Web Development",
+			"hours": 3
+		},
+		{
+			"label": "COMP 268",
+			"title": "Computer Architecture and Assembler Programming",
+			"hours": 3
+		},
+		{
+			"label": "COMP 301",
+			"title": "Software Engineering",
+			"hours": 3
+		},
+		{
+			"label": "COMP 310",
+			"title": "Operating Systems Concepts",
+			"hours": 3
+		},
+		{
+			"label": "COMP 311",
+			"title": "Data Communication and Networking",
+			"hours": 3
+		},
+		{
+			"label": "COMP 336",
+			"title": "Database Concepts and Applications",
+			"hours": 3
+		},
+		{
+			"label": "COMP 345",
+			"title": "Object Oriented Programming",
+			"hours": 3
+		},
+		{
+			"label": "COMP 439",
+			"title": "Computing Seminar",
+			"hours": 1
+		},
+		{
+			"label": "COMP 440",
+			"title": "CS Software Development Project",
+			"hours": 3
+		},
+		{
+			"label": "MATH 151",
+			"title": "College Algebra"
+			"hours": 3
+		}
+	],
+	"elective_courses": [
+		{
+			"label": "COMP 328",
+			"title": "Numerical Methods",
+			"hours": 3
+		},
+		{
+			"label": "COMP 335",
+			"title": "File Structures and Access Methods",
+			"hours": 3
+		},
+		{
+			"label": "COMP 349",
+			"title": "Applied Algorithms",
+			"hours": 3
+		},
+		{
+			"label": "COMP 367",
+			"title": "Cooperative Education",
+			"hours": 3
+		},
+		{
+			"label": "COMP 425",
+			"title": "Parallel Programming",
+			"hours": 3
+		},
+		{
+			"label": "COMP 430",
+			"title": "Artificial Intelligence",
+			"hours": 3
+		},
+		{
+			"label": "COMP 431",
+			"title": "Web Development II",
+			"hours": 3
+		},
+		{
+			"label": "COMP 445",
+			"title": "Graphical User Interface Programming",
+			"hours": 3
+		},
+		{
+			"label": "COMP 450",
+			"title": "Independent Study",
+			"hours": 3
+		},
+		{
+			"label": "COMP 475",
+			"title": "Selected Topics",
+			"hours": 3
+		},
+		{
+			"label": "EENG 220",
+			"title": "Circuits I",
+			"hours": 4
+		}
+	],
+	"electives_required": 2
+}
