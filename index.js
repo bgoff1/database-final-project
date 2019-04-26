@@ -1,39 +1,50 @@
+// <editor-fold desc="imports">
 const fs = require('fs');
+//noinspection JSUnresolvedVariable
+const readFile = fs.readFile;
+// noinspection JSUnresolvedVariable
+const writeFile = fs.writeFile;
 
-/*
-fs.readFile('./ba_cs.json', (err, data) => {
-   if (err) {
+function getFile(fileName) {
+    return fs.readFileAsync(fileName);
+}
 
-   } else {
-       const info = JSON.parse(data);
-       const required_classes = info["required_classes"];
-       const elective_courses = info["elective_courses"];
-       const electives_required = info["electives_required"];
-       console.log(required_classes);
-       console.log(elective_courses);
-       console.log(electives_required);
+fs.readFileAsync = function (filename) {
+    return new Promise((resolve, reject) => {
+        readFile(filename, (err, buffer) => {
+            if (err) reject(err); else resolve(buffer);
+        });
+    });
+};
 
-       let writer = "";
+function formatCount(count) {
+    if (count < 10) {
+        return '00' + count;
+    } else if (count >= 10 && count < 100) {
+        return '0' + count;
+    } else return count;
+}
+// </editor-fold>
 
-       for (const c of required_classes) {
-           writer += `INSERT INTO majorReq (MajorID, CourseID) VALUES (001, \"${c.label}\")\n`;
-       }
-
-       fs.writeFile("majorReqInsert.sql", writer, (err) => {
-          if (err) {
-              console.log(err);
-          } else {
-              console.log("the file was saved");
-          }
-       });
-   }
-});
-*/
-function dealWithFile(data) {
+function dealWithFile(data, num) {
     const info = JSON.parse(data);
     const required_classes = info[ "required_classes" ];
-    const elective_courses = info[ "elective_courses" ];
-    const electives_required = info[ "electives_required" ];
+
+    for (const c of required_classes) {
+        if (c && c.includes("GROUP")) {
+            console.log('in grp');
+            writer += `INSERT INTO DegreeRequirement (DegreeID, CourseID, GroupID)
+                       VALUES (${formatCount(num)}, NULL, \'${c}\');\n`;
+        } else if (c) {
+            console.log('else');
+            writer += `INSERT INTO DegreeRequirement (DegreeID, CourseID, GroupID)
+                       VALUES (${formatCount(num)}, (SELECT TOP 1 CourseID FROM COURSE WHERE label = \'${c}\'), NULL);\n`;
+        }
+    }
+}
+function courses(data) {
+    const info = JSON.parse(data);
+    const required_classes = info[ "courses" ];
 
     let classCount = 1;
 
@@ -46,59 +57,38 @@ function dealWithFile(data) {
         writer +=
             `INSERT INTO Course (CourseID, CourseName, CreditHours, DeptID,
                     Fall, Spring, Summer, Even, Odd)
-                    VALUES (${formatCount(classCount)}, \"${c.title}\", ${c.hours}, \"${c.label.substring(0,4)}\",
+                    VALUES (${formatCount(classCount)}, \'${c.title}\', ${c.hours}, \'${c.label.substring(0, 4)}\',
                     ${fall}, ${spring}, FALSE, ${even}, ${odd});\n`;
 
         classCount++;
     }
-
-    for (const c of elective_courses) {
-        let fall = c.offered.includes("Fall");
-        let spring = c.offered.includes("Spring");
-        let even = !c.offered.includes("Odd");
-        let odd = !c.offered.includes("Even");
-
-        writer +=
-            `INSERT INTO Course (CourseID, CourseName, CreditHours, DeptID,
-                    Fall, Spring, Summer, Even, Odd)
-                    VALUES (${formatCount(classCount)}, \"${c.title}\", ${c.hours}, \"${c.label.substring(0,4)}\",
-                    ${fall}, ${spring}, FALSE, ${even}, ${odd});\n`;
-        classCount++;
-
-        writer +=
-            `INSERT INTO Groups (DegreeID, GroupID, ClassID) VALUES (001, 001, ${formatCount(classCount)});\n`;
-    }
-    for (let i = 1; i <= 17; i++) {
-        writer += `INSERT INTO DegreeRequirement (DegreeID, CourseID, GroupID)
-                       VALUES (001, ${formatCount(i)}, NULL);\n`;
-    }
-}
-function formatCount(count) {
-    if (count < 10) {
-        return '00' + count;
-    } else if (count >= 10 && count < 100) {
-        return '0' + count;
-    } else return count;
 }
 let writer = "";
-fs.readFile('./bs_sd.json', (err, data) => {
-    if (!err) {
-        dealWithFile(data);
-        fs.readFile('./bs_cs.json', (err, data) => {
-            if (!err) {
-                dealWithFile(data);
-            }
-            fs.readFile('./ba_cs.json', (err, data) => {
-                if (!err) {
-                    dealWithFile(data);
-                    fs.writeFile("majorReqInsert.sql", writer, (err) => {
-                        if (err) { console.log(err); }
-                    });
-                }
-            });
-        });
 
-    }
+async function x() {
+    // await getFile('./bs_sd.json').then(res => {
+    //     dealWithFile(res.toString(), 1);
+    // }).catch(err => console.log(err));
+    await getFile('./bs_cs.json').then(res => {
+        dealWithFile(res.toString(), 2);
+    }).catch(err => console.log(err));
+    await getFile('./ba_cs.json').then(res => {
+        dealWithFile(res.toString(), 3);
+    }).catch(err => console.log(err));
+    // await getFile('./lib_arts.json').then(res => {
+    //     dealWithFile(res);
+    // }).catch(err => console.log('err', err));
+    await getFile('./courses.json').then(res => {
+        courses(res);
+    }).catch(err => console.log('err', err));
+}
+x().then(() => {
+    console.log('finished');
+    writeFile("courses.sql", writer, (err) => {
+        if (err) {
+            console.log(err);
+        }
+    });
 });
 
 

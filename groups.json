@@ -1,0 +1,72 @@
+{
+	"groups": [
+		{
+			"name": "GROUP 1",
+			"consists of": [
+				"COMP 150",
+				"COMP 151"
+			],
+			"alternate": [
+				"COMP 170"
+			],
+			"count": null
+		},
+		{
+			"name": "GROUP 2",
+			"consists of": [
+				"COMP 328",
+				"COMP 335",
+				"COMP 349",
+				"COMP 367",
+				"COMP 425",
+				"COMP 430",
+				"COMP 431",
+				"COMP 445",
+				"COMP 450",
+				"COMP 475",
+				"EENG 220"
+			],
+			"count": 2
+		},
+		{
+			"name": "GROUP 3",
+			"consists of": [
+				"COMP 328",
+				"COMP 335",
+				"COMP 349",
+				"COMP 367",
+				"COMP 425",
+				"COMP 430",
+				"COMP 431",
+				"COMP 445",
+				"COMP 450",
+				"COMP 475",
+				"EENG 220"
+			],
+			"count": 3
+		},
+		{
+			"name": "GROUP 4",
+			"consists of": [
+				"KINS 112",
+				"KINS 113",
+				"KINS 114",
+				"KINS 115",
+				"KINS 116",
+				"KINS 117",
+				"KINS 119",
+				"KINS 121",
+				"KINS 122",
+				"KINS 125",
+				"KINS 126",
+				"KINS 128",
+				"KINS 131",
+				"KINS 132",
+				"KINS 133",
+				"KINS 134",
+				"KINS 135",
+			],
+			"count": 1
+		}
+	]
+}

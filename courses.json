@@ -1,0 +1,433 @@
+{
+	"courses": [
+		{
+			"label": "COMP 150",
+			"title": "Programming I",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "COMP 151",
+			"title": "Programming II",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 150"
+			],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "COMP 170",
+			"title": "Software Development",
+			"hours": 5,
+			"offered": "Fall"
+		},
+		{
+			"label": "COMP 245",
+			"title": "Data Structures",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 170 or COMP 150 and 151"
+			],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "COMP 250",
+			"title": "Web Development",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 170 or COMP 150 and 151"
+			],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "COMP 268",
+			"title": "Computer Architecture and Assembler Programming",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 170 or COMP 150 and 151"
+			],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "COMP 301",
+			"title": "Software Engineering",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 170 or COMP 150 and 151"
+			],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "COMP 310",
+			"title": "Operating Systems Concepts",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 245",
+				"COMP 268 or EENG 240"
+			],
+			"offered": "Fall"
+		},
+		{
+			"label": "COMP 311",
+			"title": "Data Communication and Networking",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 245",
+				"COMP 268 or EENG 240"
+			],
+			"offered": "Spring"
+		},
+		{
+			"label": "COMP 336",
+			"title": "Database Concepts and Applications",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 245",
+				"COMP 301"
+			],
+			"offered": "Spring"
+		},
+		{
+			"label": "COMP 345",
+			"title": "Object Oriented Programming",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 245"
+			],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "COMP 439",
+			"title": "Computing Seminar",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "COMP 440",
+			"title": "CS Software Development Project",
+			"hours": 3,
+			"offered": "Spring"
+		},
+		{
+			"label": "MATH 151",
+			"title": "College Algebra",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "MATH 201",
+			"title": "Analytics and Calculus I",
+			"hours": 5,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "MATH 251",
+			"title": "Analytics and Calculus II",
+			"hours": 5,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "MATH 260",
+			"title": "Discrete Mathematical Structures",
+			"hours": 3,
+			"offered": "Spring"
+		},
+		{
+			"label": "MATH 313",
+			"title": "Linear Algebra",
+			"hours": 3,
+			"offered": "Fall"
+		},
+		{
+			"label": "MATH 318",
+			"title": "Probability",
+			"hours": 3,
+			"offered": "Spring"
+		},
+		{
+			"label": "COMP 328",
+			"title": "Numerical Methods",
+			"hours": 3,
+			"offered": "Spring Even"
+		},
+		{
+			"label": "COMP 335",
+			"title": "File Structures and Access Methods",
+			"hours": 3,
+			"offered": "Fall Odd"
+		},
+		{
+			"label": "COMP 349",
+			"title": "Applied Algorithms",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 245"
+			],
+			"offered": "Fall"
+		},
+		{
+			"label": "COMP 367",
+			"title": "Cooperative Education",
+			"hours": 3,
+			"offered": "By arrangement"
+		},
+		{
+			"label": "COMP 425",
+			"title": "Parallel Programming",
+			"hours": 3,
+			"offered": "Spring Odd"
+		},
+		{
+			"label": "COMP 430",
+			"title": "Artificial Intelligence",
+			"hours": 3,
+			"offered": "Fall Even"
+		},
+		{
+			"label": "COMP 431",
+			"title": "Web Development II",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 250"
+			],
+			"corequisite": "COMP 345",
+			"offered": "Spring"
+		},
+		{
+			"label": "COMP 445",
+			"title": "Graphical User Interface Programming",
+			"hours": 3,
+			"prerequisites": [
+				"COMP 345"
+			],
+			"offered": "Fall"
+		},
+		{
+			"label": "COMP 450",
+			"title": "Independent Study",
+			"hours": 3,
+			"offered": "By arrangement"
+		},
+		{
+			"label": "COMP 475",
+			"title": "Selected Topics",
+			"hours": 3,
+			"offered": "Fall Spring"
+		},
+		{
+			"label": "EENG 220",
+			"title": "Circuits I",
+			"hours": 4,
+			"offered": "Fall"
+		},
+		{
+			"label": "BNEW 111",
+			"title": "Life and Teachings of Jesus (Gospels)",
+			"hours": 2,
+			"offered": "Fall"
+		},
+		{
+			"label": "BNEW 113",
+			"title": "Faith and Mission of the Church (Acts through Revelation)",
+			"hours": 2,
+			"offered": "Spring"
+		},
+		{
+			"label": "BOLD 203",
+			"title": "Creation and Kingdom (Genesis through Esther)",
+			"hours": 2,
+			"offered": "Fall"
+		},
+		{
+			"label": "BOLD 207",
+			"title": "Wisdom and Prophets (Job through Malachi)",
+			"hours": 2,
+			"offered": "Spring"
+		},
+		{
+			"label": "BOLD 302",
+			"title": "Old Testament Story and Vision (Genesis - Malachi)",
+			"hours": 3,
+			"prerequisites": ["Not a transfer student"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "BNEW 311",
+			"title": "New Testament Story and Vision (Matthew - Revelation)",
+			"hours": 3,
+			"prerequisites": ["Not a transfer student"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "ENG 111",
+			"title": "Introduction to University Writing and Research",
+			"hours": 3,
+			"prerequisites": ["ACTEnglish 18+ or ENG 099"],
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "ENG 113",
+			"title": "Introduction to University Writing, Research, and Grammar",
+			"hours": 3,
+			"prerequisites": ["ACTEnglish 18+ or ENG 099"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "ENG 211",
+			"title": "Critical Reading, Thinking, and Writing",
+			"hours": 3,
+			"prerequisites": ["ENG 111 or ENG 113"],
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "COMM 101",
+			"title": "Communication Principles",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "ECON 201",
+			"title": "Macroeconomics",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "SOC 203",
+			"title": "General Sociology",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "KINS 101",
+			"title": "Wellness",
+			"hours": 2,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "POLS 205",
+			"title": "American National Government",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "PSY 201",
+			"title": "General Psychology",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "KINS 112",
+			"title": "Beginning and Intermediate Swimming",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 113",
+			"title": "Crosstraining",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 114",
+			"title": "Running and Race Training",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 115",
+			"title": "Kayaking and Fishing",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 116",
+			"title": "Lifetime Fitness",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 117",
+			"title": "Aerobics",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 119",
+			"title": "Conditioning Activities",
+			"hours": 1,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "KINS 121",
+			"title": "Pickleball and Badminton",
+			"hours": 1,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "KINS 122",
+			"title": "Tennis and Racquetball",
+			"hours": 1,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "KINS 125",
+			"title": "Golf",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 126",
+			"title": "Adapted Activities",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 128",
+			"title": "Weight and Cardio Training",
+			"hours": 1,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "KINS 131",
+			"title": "Hunting and Gun Safety",
+			"hours": 1,
+			"offered": "Fall"
+		},
+		{
+			"label": "KINS 132",
+			"title": "Bait Cast, Fish, and Boat Safety",
+			"hours": 1,
+			"offered": "Spring"
+		},
+		{
+			"label": "KINS 133",
+			"title": "Recreational Activities",
+			"hours": 1,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "KINS 134",
+			"title": "Scuba Diving",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "KINS 135",
+			"title": "Rock Climbing",
+			"hours": 1,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "BIOL 111",
+			"title": "General Biology",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "BIOL 113",
+			"title": "Human Structure and Function",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		}
+	]
+}
