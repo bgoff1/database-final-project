@@ -1,0 +1,19 @@
+{
+  "name": "database-final-project",
+  "version": "1.0.0",
+  "description": "creating a database to contain all registration information",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/judahgoffhomework/database-final-project.git"
+  },
+  "author": "Judah Goff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/judahgoffhomework/database-final-project/issues"
+  },
+  "homepage": "https://github.com/judahgoffhomework/database-final-project#readme"
+}
