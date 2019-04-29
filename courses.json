@@ -531,6 +531,411 @@
 			"title": "Western Civilization Since 1500",
 			"hours": 3,
 			"offered": "Fall, Spring and Summer"
-		}
+		},
+		{
+			"label": "ANTH 250",
+			"title": "Anthropology",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "ART 434",
+			"title": "Oriental, African and Oceanic Art History",
+			"hours": 3,
+			"offered": "Spring"
+		},
+		{
+			"label": "BHIS 345",
+			"title": "Living World Religions",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "BHIS 348",
+			"title": "Archaeology and Geography of Israel",
+			"hours": 3,
+			"corequisite": "BHIS 347",
+			"offered": "Summer"
+		},
+		{
+			"label": "BHIS 347",
+			"title": "Bible Archaeology Practicum",
+			"hours": 3,
+			"corequisite": "BHIS 348",
+			"offered": "Summer"
+		},
+		{
+			"label": "BIOL 250",
+			"title": "Environmental Science",
+			"hours": 3,
+			"offered": "Spring"
+		},
+		{
+			"label": "BMIS 280",
+			"title": "The World Christian",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "BMIS 386",
+			"title": "Missionary Anthropology",
+			"hours": 3,
+			"offered": "Fall"
+		},
+		{
+			"label": "BMIS 387",
+			"title": "Field Work in Missions",
+			"hours": 0,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "BMIS 387",
+			"title": "Field Work in Missions",
+			"hours": 1,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "BMIS 387",
+			"title": "Field Work in Missions",
+			"hours": 2,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "BMIS 387",
+			"title": "Field Work in Missions",
+			"hours": 3,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "BMIS 388",
+			"title": "Development Ministry",
+			"hours": 0,
+			"offered": "Summer"
+		},
+		{
+			"label": "BMIS 388",
+			"title": "Development Ministry",
+			"hours": 3,
+			"offered": "Summer"
+		},
+		{
+			"label": "CSD 275",
+			"title": "American Sign Language I",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "CSD 277",
+			"title": "American Sign Language II",
+			"hours": 3,
+			"prerequisites": ["CSD 275"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "ENGR 330",
+			"title": "Engineering Service Project 1",
+			"hours": 2,
+			"prerequisites": ["PHYS 211", "EENG 220 or CENG 245 or MENG 225"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "ENGR 331",
+			"title": "Engineering Service Project 2",
+			"hours": 1,
+			"prerequisites": ["ENGR 330"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "FCS 205",
+			"title": "Families in Global Society",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "FIN 275",
+			"title": "International Finance",
+			"hours": 3,
+			"prerequisites": ["FIN 343"],
+			"offered": "Spring"
+		},
+		{
+			"label": "GEDV 302",
+			"title": "Economic Development Theory",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "GEOG 302",
+			"title": "Regional Geography: Europe and the Americas",
+			"hours": 3,
+			"offered": "Fall"
+		},
+		{
+			"label": "GEOG 303",
+			"title": "Regional Geography: Africa and Asia",
+			"hours": 3,
+			"offered": "Spring"
+		},
+		{
+			"label": "HIST 209",
+			"title": "History and Culture of Africa",
+			"hours": 3,
+			"offered": "Spring Even"
+		},
+		{
+			"label": "HIST 211",
+			"title": "History and Culture of the Far East",
+			"hours": 3,
+			"offered": "Fall Even"
+		},
+		{
+			"label": "HIST 213",
+			"title": "History and Culture of the Middle East",
+			"hours": 3,
+			"offered": "Spring Odd"
+		},
+		{
+			"label": "HIST 215",
+			"title": "History and Culture of Latin America",
+			"hours": 3,
+			"offered": "Fall Odd"
+		},
+		{
+			"label": "HNRS 204",
+			"title": "The Human Situation II: Social Systems",
+			"hours": 3,
+			"offered": "Fall"
+		},
+		{
+			"label": "HUM 201",
+			"title": "International Studies",
+			"hours": 1,
+			"offered": "Abroad"
+		},
+		{
+			"label": "HUM 201",
+			"title": "International Studies",
+			"hours": 2,
+			"offered": "Abroad"
+		},
+		{
+			"label": "HUM 201",
+			"title": "International Studies",
+			"hours": 3,
+			"offered": "Abroad"
+		},
+		{
+			"label": "HUM 273",
+			"title": "World Civilization/Humanities",
+			"hours": 2,
+			"offered": "Abroad"
+		},
+		{
+			"label": "HUM 273",
+			"title": "World Civilization/Humanities",
+			"hours": 3,
+			"offered": "Abroad"
+		},
+		{
+			"label": "HUM 273",
+			"title": "World Civilization/Humanities",
+			"hours": 4,
+			"offered": "Abroad"
+		},
+		{
+			"label": "HUM 273",
+			"title": "World Civilization/Humanities",
+			"hours": 5,
+			"offered": "Abroad"
+		},
+		{
+			"label": "HUM 273",
+			"title": "World Civilization/Humanities",
+			"hours": 6,
+			"offered": "Abroad"
+		},
+		{
+			"label": "IB 325",
+			"title": "Global Business Environment",
+			"hours": 3,
+			"offered": "Abroad"
+		},
+		{
+			"label": "IB 325",
+			"title": "Global Business Environment",
+			"hours": 4,
+			"offered": "Abroad"
+		},
+		{
+			"label": "IB 325",
+			"title": "Global Business Environment",
+			"hours": 5,
+			"offered": "Abroad"
+		},
+		{
+			"label": "IB 325",
+			"title": "Global Business Environment",
+			"hours": 6,
+			"offered": "Abroad"
+		},
+		{
+			"label": "IB 345",
+			"title": "International Business",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 3,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 4,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 5,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 6,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 7,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 8,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 9,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 10,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 11,
+			"offered": "Abroad"
+		},
+		{
+			"label": "INST 310",
+			"title": "Independent Study Abroad",
+			"hours": 12,
+			"offered": "Abroad"
+		},
+		{
+			"label": "IS 420",
+			"title": "Advanced Global Project Management",
+			"hours": 3,
+			"prerequisites": ["IS 400"],
+			"offered": "Fall"
+		},
+		{
+			"label": "KINS 320",
+			"title": "Sports From a Global Perspective",
+			"hours": 3,
+			"offered": "Spring and Summer"
+		},
+		{
+			"label": "MGRK 100",
+			"title": "Modern Greek",
+			"hours": 3,
+			"offered": "HUG"
+		},
+		{
+			"label": "MUS 324",
+			"title": "World Music",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "NURS 305",
+			"title": "Culture of Poverty",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "PPHS 305",
+			"title": "Culture of Poverty",
+			"hours": 3,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "NURS 413",
+			"title": "Health Care Missions",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "PPHS 413",
+			"title": "Health Care Missions",
+			"hours": 3,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "NURS 344",
+			"title": "Health Missions Practicum",
+			"hours": 1,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "NURS 344",
+			"title": "Health Missions Practicum",
+			"hours": 2,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "NURS 344",
+			"title": "Health Missions Practicum",
+			"hours": 3,
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "POLS 202",
+			"title": "International Relations",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "SOCS 301",
+			"title": "Global Issues",
+			"hours": 3,
+			"prerequisites": ["POLS 202"],
+			"offered": "Fall Odd"
+		},
+		{
+			"label": "SWK 360",
+			"title": "International Social Work",
+			"hours": 3,
+			"offered": "Fall"
+		},
+		{
+			"label": "THEA 306",
+			"title": "World Drama",
+			"hours": 3,
+			"offered": "Fall Even"
+		},
+		
 	]
 }
