@@ -112,6 +112,7 @@
 			"label": "MATH 151",
 			"title": "College Algebra",
 			"hours": 3,
+			"prerequisites": ["MATH 105 or ACTMath 22+"],
 			"offered": "Fall and Spring"
 		},
 		{
@@ -428,6 +429,108 @@
 			"title": "Human Structure and Function",
 			"hours": 3,
 			"offered": "Fall and Spring"
+		},
+		{
+			"label": "MATH 200",
+			"title": "Elementary Statistics",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "PHS 111",
+			"title": "Earth Science",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "PHS 112",
+			"title": "Geology",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "PHS 113",
+			"title": "Astronomy and Space Science",
+			"hours": 3,
+			"offered": "Spring Odd"
+		},
+		{
+			"label": "PHS 115",
+			"title": "Energy, Pollution and Society",
+			"hours": 3,
+			"offered": "Fall"
+		},
+		{
+			"label": "PHS 116",
+			"title": "Physical Science",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "PHS 117",
+			"title": "Physical Science for Educators",
+			"hours": 4,
+			"offered": "Spring"
+		},
+		{
+			"label": "PHS 118",
+			"title": "Chemistry and Culture",
+			"hours": 3,
+			"offered": "Spring Even"
+		},
+		{
+			"label": "ART 101",
+			"title": "Art Appreciation",
+			"hours": 3,
+			"offered": "Fall, Spring, and Summer"
+		},
+		{
+			"label": "MUS 101",
+			"title": "Music Appreciation",
+			"hours": 3,
+			"offered": "Fall, Spring, and Summer"
+		},
+		{
+			"label": "THEA 101",
+			"title": "Theatre Appreciation",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "ENG 201",
+			"title": "World Literature I",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "ENG 202",
+			"title": "World Literature II",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "HIST 101",
+			"title": "American History to 1877",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "HIST 102",
+			"title": "American History Since 1877",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "HIST 110",
+			"title": "Western Civilization to 1500",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "HIST 111",
+			"title": "Western Civilization Since 1500",
+			"hours": 3,
+			"offered": "Fall, Spring and Summer"
 		}
 	]
 }

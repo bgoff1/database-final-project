@@ -16,7 +16,8 @@ fs.readFileAsync = function (filename) {
         });
     });
 };
-
+// </editor-fold>
+// <editor-fold desc="config">
 function formatCount(count) {
     if (count < 10) {
         return '00' + count;
@@ -24,6 +25,17 @@ function formatCount(count) {
         return '0' + count;
     } else return count;
 }
+
+function getCourseNumber(courseLabel) {
+    let course = courseLabel.split(" ");
+    return course.length > 1 ? course[ 1 ] : course[ 0 ];
+}
+
+function getCoursePrefix(courseLabel) {
+    let course = courseLabel.split(" ");
+    return course[ 0 ];
+}
+
 // </editor-fold>
 
 function dealWithFile(data, num) {
@@ -42,6 +54,7 @@ function dealWithFile(data, num) {
         }
     }
 }
+
 function courses(data) {
     const info = JSON.parse(data);
     const required_classes = info[ "courses" ];
@@ -49,40 +62,44 @@ function courses(data) {
     let classCount = 1;
 
     for (const c of required_classes) {
-        let fall = c.offered.includes("Fall");
-        let spring = c.offered.includes("Spring");
-        let even = !c.offered.includes("Odd");
-        let odd = !c.offered.includes("Even");
+        let fall = c.offered.includes("Fall") ? 1 : 0;
+        let spring = c.offered.includes("Spring") ? 1 : 0;
+        let summer = c.offered.includes("Summer") ? 1 : 0;
+        let even = !c.offered.includes("Odd") ? 1 : 0;
+        let odd = !c.offered.includes("Even") ? 1 : 0;
 
         writer +=
-            `INSERT INTO Course (CourseID, CourseName, CreditHours, DeptID,
-                    Fall, Spring, Summer, Even, Odd)
-                    VALUES (${formatCount(classCount)}, \'${c.title}\', ${c.hours}, \'${c.label.substring(0, 4)}\',
-                    ${fall}, ${spring}, FALSE, ${even}, ${odd});\n`;
+            `INSERT INTO Course (idCourse, courseName, CourseNumber, Hours, Spring, Summer, Fall, Even, Odd, idDepartment)
+            VALUES (${classCount}, \'${c.title}\', ${getCourseNumber(c.label)}, ${c.hours}, ${spring}, ${summer}, ${fall}, ${even}, ${odd}, (SELECT idDepartment FROM Department WHERE Prefix = \'${getCoursePrefix(c.label)}\'));\n`;
 
         classCount++;
     }
 }
+
 let writer = "";
 
-async function x() {
-    // await getFile('./bs_sd.json').then(res => {
-    //     dealWithFile(res.toString(), 1);
-    // }).catch(err => console.log(err));
+async function loadCourses() {
+    await getFile('./courses.json').then(res => {
+        courses(res);
+    }).catch(err => console.log('err', err));
+}
+
+async function requirements() {
+    await getFile('./bs_sd.json').then(res => {
+        dealWithFile(res.toString(), 1);
+    }).catch(err => console.log(err));
     await getFile('./bs_cs.json').then(res => {
         dealWithFile(res.toString(), 2);
     }).catch(err => console.log(err));
     await getFile('./ba_cs.json').then(res => {
         dealWithFile(res.toString(), 3);
     }).catch(err => console.log(err));
-    // await getFile('./lib_arts.json').then(res => {
-    //     dealWithFile(res);
-    // }).catch(err => console.log('err', err));
-    await getFile('./courses.json').then(res => {
-        courses(res);
+    await getFile('./lib_arts.json').then(res => {
+        dealWithFile(res);
     }).catch(err => console.log('err', err));
 }
-x().then(() => {
+
+loadCourses().then(() => {
     console.log('finished');
     writeFile("courses.sql", writer, (err) => {
         if (err) {
