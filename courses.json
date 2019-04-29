@@ -109,6 +109,25 @@
 			"offered": "Spring"
 		},
 		{
+			"label": "MATH 099",
+			"title": "Beginning Algebra",
+			"hours": 2,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "MATH 099",
+			"title": "Beginning Algebra",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "MATH 105",
+			"title": "Foundations of Algebra",
+			"hours": 2,
+			"prerequisites": ["MATH 099"],
+			"offered": "Fall and Spring"
+		},
+		{
 			"label": "MATH 151",
 			"title": "College Algebra",
 			"hours": 3,
@@ -257,6 +276,12 @@
 			"title": "New Testament Story and Vision (Matthew - Revelation)",
 			"hours": 3,
 			"prerequisites": ["Not a transfer student"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "ENG 099",
+			"title": "Basic English",
+			"hours": 0,
 			"offered": "Fall and Spring"
 		},
 		{
@@ -936,6 +961,195 @@
 			"hours": 3,
 			"offered": "Fall Even"
 		},
-		
+		{
+			"label": "ENGR 310",
+			"title": "Engineering Economics",
+			"hours": 3,
+			"offered": "Spring"
+		},
+		{
+			"label": "CHEM 125",
+			"title": "Engineering Chemistry",
+			"hours": 4,
+			"prerequisites": ["ACTMath 25+ or MATH 151/MATH 152 or MATH 201"],
+			"offered": "Spring"
+		},
+		{
+			"label": "BDOC 253",
+			"title": "Literature of Faith",
+			"hours": 3,
+			"offered": "Spring"
+		},
+		{
+			"label": "BHIS 340",
+			"title": "Church History - Ancient to Medieval",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "BHIS 344",
+			"title": "Church History: Reformation to Modern",
+			"hours": 3,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "EENG 221",
+			"title": "Circuits II",
+			"hours": 4,
+			"prerequisites": ["EENG 220"],
+			"offered": "Spring"
+		},
+		{
+			"label": "EENG 240",
+			"title": "Digital Logic Design",
+			"hours": 4,
+			"offered": "Spring"
+		},
+		{
+			"label": "EENG 320",
+			"title": "Electronics",
+			"hours": 4,
+			"prerequisites": ["EENG 221", "PHYS 212"],
+			"offered": "Fall"
+		},
+		{
+			"label": "EENG 350",
+			"title": "Digital Signal Processing",
+			"hours": 3,
+			"prerequisites": ["EENG 340"],
+			"offered": "Spring"
+		},
+		{
+			"label": "EENG 420",
+			"title": "Microprocessors and Microcontrollers",
+			"hours": 4,
+			"prerequisites": ["EENG 240", "COMP 150 or COMP 170"],
+			"offered": "Spring"
+		},
+		{
+			"label": "ENGR 101",
+			"title": "Introduction to Engineering",
+			"hours": 2,
+			"offered": "Fall"
+		},
+		{
+			"label": "ENGR 289",
+			"title": "Engineering Ethics and Professionalism",
+			"hours": 1,
+			"offered": "Spring"
+		},
+		{
+			"label": "ENGR 420",
+			"title": "Engineering Design Project I",
+			"hours": 2,
+			"prerequisites": ["EENG 420 or MENG 410 or BENG 370", "BENG 380"],
+			"offered": "Fall"
+		},
+		{
+			"label": "ENGR 421",
+			"title": "Engineering Design Project II",
+			"hours": 2,
+			"prerequisites": ["ENGR 420"],
+			"offered": "Spring"
+		},
+		{
+			"label": "ENGR 490",
+			"title": "Engineering Professional Development",
+			"hours": 0,
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "MATH 301",
+			"title": "Analytics and Calculus III",
+			"hours": 3,
+			"prerequisites": ["MATH 251"],
+			"offered": "Fall, Spring and Summer"
+		},
+		{
+			"label": "MATH 351",
+			"title": "Differential Equations",
+			"hours": 3,
+			"prerequisites": ["MATH 251"],
+			"offered": "Spring"
+		},
+		{
+			"label": "MATH 419",
+			"title": "Probability and Statistics",
+			"hours": 3,
+			"prerequisites": ["MATH 301"],
+			"offered": "Summer"
+		},
+		{
+			"label": "PHYS 211",
+			"title": "Engineering Physics I",
+			"hours": 4,
+			"prerequisites": ["MATH 201"],
+			"corequisite": "MATH 251",
+			"offered": "Fall"
+		},
+		{
+			"label": "PHYS 212",
+			"title": "Engineering Physics II",
+			"hours": 4,
+			"prerequisites": ["MATH 201"],
+			"corequisite": "MATH 251",
+			"offered": "Spring"
+		},
+		{
+			"label": "EENG 330",
+			"title": "Digital Electronics",
+			"hours": 3,
+			"prerequisites": ["EENG 130", "EENG 320"],
+			"offered": "Sufficient Enrollment"
+		},
+		{
+			"label": "EENG 340",
+			"title": "Signals and Systems",
+			"hours": 3,
+			"prerequisites": ["EENG 221 or MENG 230"],
+			"offered": "Spring"
+		},
+		{
+			"label": "EENG 380",
+			"title": "Electromechanics",
+			"hours": 3,
+			"prerequisites": ["EENG 221", "PHYS 212"],
+			"offered": "Fall"
+		},
+		{
+			"label": "ENGR 445",
+			"title": "Robotics",
+			"hours": 3,
+			"prerequisites": ["MATH 351"],
+			"offered": "Spring"
+		},
+		{
+			"label": "CENG 385",
+			"title": "Telecommunications",
+			"hours": 3,
+			"prerequisites": ["CENG 268 or EENG 220"],
+			"offered": "Fall"
+		},
+		{
+			"label": "ENGR 301",
+			"title": "Design Build Compete 1",
+			"hours": 1,
+			"prerequisites": ["PHYS 211", "EENG 220 or CENG 245 or MENG 225"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "ENGR 302",
+			"title": "Design Build Compete 2",
+			"hours": 1,
+			"prerequisites": ["ENGR 301"],
+			"offered": "Fall and Spring"
+		},
+		{
+			"label": "ENGR 303",
+			"title": "Design Build Compete 3",
+			"hours": 1,
+			"prerequisites": ["ENGR 302"],
+			"offered": "Fall and Spring"
+		}
 	]
 }
