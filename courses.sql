@@ -1,3 +1,4 @@
+DELETE FROM Course WHERE idCourse NOT IN (SELECT idCourse FROM Transcript UNION SELECT idCourse FROM Degree_Requirements);
 INSERT INTO Course (idCourse, courseName, CourseNumber, Hours, Spring, Summer, Fall, Even, Odd, idDepartment)
             VALUES (1, 'Programming I', 150, 3, 1, 0, 1, 1, 1, (SELECT idDepartment FROM Department WHERE Prefix = 'COMP'));
 INSERT INTO Course (idCourse, courseName, CourseNumber, Hours, Spring, Summer, Fall, Even, Odd, idDepartment)

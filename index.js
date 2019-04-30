@@ -18,14 +18,6 @@ fs.readFileAsync = function (filename) {
 };
 // </editor-fold>
 // <editor-fold desc="config">
-function formatCount(count) {
-    if (count < 10) {
-        return '00' + count;
-    } else if (count >= 10 && count < 100) {
-        return '0' + count;
-    } else return count;
-}
-
 function getCourseNumber(courseLabel) {
     let course = courseLabel.split(" ");
     return course.length > 1 ? course[ 1 ] : course[ 0 ];
@@ -38,29 +30,39 @@ function getCoursePrefix(courseLabel) {
 
 // </editor-fold>
 
-function dealWithFile(data, num) {
-    const info = JSON.parse(data);
-    const required_classes = info[ "required_classes" ];
+function prerequisites(data) {
+    let writer = '';
 
-    for (const c of required_classes) {
-        if (c && c.includes("GROUP")) {
-            console.log('in grp');
-            writer += `INSERT INTO DegreeRequirement (DegreeID, CourseID, GroupID)
-                       VALUES (${formatCount(num)}, NULL, \'${c}\');\n`;
-        } else if (c) {
-            console.log('else');
-            writer += `INSERT INTO DegreeRequirement (DegreeID, CourseID, GroupID)
-                       VALUES (${formatCount(num)}, (SELECT TOP 1 CourseID FROM COURSE WHERE label = \'${c}\'), NULL);\n`;
+    const info = JSON.parse(data);
+    const courses = info[ "courses" ];
+
+    let getCourseId = (c) => `(SELECT idCourse FROM Course WHERE courseName = \'${ c.title }\' AND CourseNumber = ${ getCourseNumber(c.label) })`;
+    let getCourseDepartment = (c) => `(SELECT idDepartment FROM Department WHERE Prefix = \'${ getCoursePrefix(c) }\')`;
+    let getPrerequisiteId = (c) => `(SELECT idCourse FROM Course WHERE CourseNumber = ${ getCourseNumber(c) } AND idDepartment = ${ getCourseDepartment(c) })`;
+    for (const c of courses) {
+        if (c.hasOwnProperty('prerequisites')) {
+            let prereqs = [];
+            for (const pre of c.prerequisites) {
+                prereqs.push(pre);
+                if (pre.match(/^[A-Z]{2,4} [\d]+$/)) {
+                    writer += `INSERT INTO Prerequisites (idCourse, idGroup, idPrerequisite) VALUES (${ getCourseId(c) }, NULL, ${ getPrerequisiteId(pre) });\n`;
+                }
+            }
         }
     }
+    return writer;
 }
 
+let p = true;
+
 function courses(data) {
+    let writer = '';
+    writer += 'DELETE FROM Course WHERE idCourse NOT IN (SELECT idCourse FROM Transcript UNION SELECT idCourse FROM Degree_Requirements);\n';
     const info = JSON.parse(data);
     const required_classes = info[ "courses" ];
 
     let classCount = 1;
-
+    let department = (c) => `(SELECT idDepartment FROM Department WHERE Prefix = \'${ getCoursePrefix(c.label) }\')`;
     for (const c of required_classes) {
         let fall = c.offered.includes("Fall") ? 1 : 0;
         let spring = c.offered.includes("Spring") ? 1 : 0;
@@ -70,36 +72,33 @@ function courses(data) {
 
         writer +=
             `INSERT INTO Course (idCourse, courseName, CourseNumber, Hours, Spring, Summer, Fall, Even, Odd, idDepartment)
-            VALUES (${classCount}, \'${c.title}\', ${getCourseNumber(c.label)}, ${c.hours}, ${spring}, ${summer}, ${fall}, ${even}, ${odd}, (SELECT idDepartment FROM Department WHERE Prefix = \'${getCoursePrefix(c.label)}\'));\n`;
+            VALUES (${ classCount }, \'${ c.title }\', ${ getCourseNumber(c.label) }, ${ c.hours }, ${ spring }, ${ summer }, ${ fall }, ${ even }, ${ odd }, ${ department(c) });\n`;
 
         classCount++;
     }
+    return writer;
 }
-
-let writer = "";
 
 async function loadCourses() {
-    await getFile('./courses.json').then(res => {
-        courses(res);
+    return await getFile('./courses.json').then(res => {
+        return courses(res);
     }).catch(err => console.log('err', err));
 }
 
-async function requirements() {
-    await getFile('./bs_sd.json').then(res => {
-        dealWithFile(res.toString(), 1);
-    }).catch(err => console.log(err));
-    await getFile('./bs_cs.json').then(res => {
-        dealWithFile(res.toString(), 2);
-    }).catch(err => console.log(err));
-    await getFile('./ba_cs.json').then(res => {
-        dealWithFile(res.toString(), 3);
-    }).catch(err => console.log(err));
-    await getFile('./lib_arts.json').then(res => {
-        dealWithFile(res);
+async function loadPrerequisites() {
+    return await getFile('./courses.json').then(res => {
+        return prerequisites(res);
     }).catch(err => console.log('err', err));
 }
 
-loadCourses().then(() => {
+loadPrerequisites().then((writer) => {
+    writeFile('prerequisites.sql', writer, (err) => {
+        if (err) {
+            console.log(err);
+        }
+    })
+});
+loadCourses().then((writer) => {
     console.log('finished');
     writeFile("courses.sql", writer, (err) => {
         if (err) {
@@ -107,5 +106,3 @@ loadCourses().then(() => {
         }
     });
 });
-
-
